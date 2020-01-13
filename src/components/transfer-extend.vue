@@ -607,9 +607,7 @@ export default {
           typeof item[id__] == "number"
             ? `"${id__}":${item[id__]},`
             : `"${id__}":"${item[id__]}"`;
-        console.log('strItem',strItem)
-        let reg = RegExp(strItem);
-        console.log('strData',strData)
+        let reg = RegExp("\\+", strItem);
         let existed = reg.test(strData);
         return existed;
       }
